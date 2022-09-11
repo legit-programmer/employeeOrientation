@@ -1,0 +1,24 @@
+{%extends 'blocking.html'%}
+{%block title%}all employees{%endblock%}
+{%block content%}
+
+
+{%for e in emp%}
+<div class="flex flex-col justify-center items-center px-10">
+    <div class="flex flex-col px-5 py-5 rounded-lg bg-indigo-200 border-2 border-indigo-400 gap-5">
+        <div>
+            <img class="max-w-sm rounded-lg" src="/media/{{ e.image }}" alt="Employee">
+        </div>
+        <div class="flex flex-col gap-1">
+            <h1 class="text-3xl font-bold text-slate-900"></h1>
+            <p class="text-slate-800 font-semibold">{{e.name}}</p>
+            <p class="text-slate-800 font-semibold">{{e.designation}}</p>
+            <div class="flex flex-row gap-2">
+                <button class="text-sm bg-indigo-600 px-4 py-3 text-slate-300 rounded-lg hover:bg-indigo-500 transition duration-300">Edit</button>
+                <button class="text-sm bg-slate-600 px-4 py-3 text-slate-300 rounded-lg hover:bg-slate-500 transition duration-300">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+{%endfor%}
+{%endblock%}

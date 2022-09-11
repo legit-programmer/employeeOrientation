@@ -1,0 +1,16 @@
+{%extends 'blocking.html'%}
+{%block title%}add employees{%endblock%}
+{%block content%}
+
+
+<form  action="/employeeManager/addEmp/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<input type="text" name="name" id="name" class="name" placeholder="Enter your name"><br>
+<input type="text" name="age" id="name" class="name" placeholder="age"><br>
+<input type="text" name="salary" id="name" class="name" placeholder="salary"><br>
+<input type="text" name="qualification" id="name" class="name" placeholder="qualification"><br>
+<input type="text" name="designation" id="name" class="name" placeholder="designation"><br>
+<input type="file" id="myfile" name="myfile">
+<input type="submit" value="Publish" class="button">
+</form>
+{%endblock%}
