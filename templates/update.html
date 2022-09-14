@@ -5,28 +5,28 @@
 
 <div class="flex flex-col justify-center items-center">
     <div class="flex flex-col px-10 py-10 rounded-lg bg-indigo-200 border-2 border-indigo-400 gap-5">
-        <h1 class="text-4xl text-slate-900 font-bold">New Employee!</h1>
-        <form action="/employeeManager/addEmp/" method="POST" enctype="multipart/form-data">
+        <h1 class="text-4xl text-slate-900 font-bold">Update Employee!</h1>
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="mb-2">
                 <label class="block text-slate-900 text-md font-semibold mb-2" for="name">Name</label>
-                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" type="text" placeholder="John Doe">
+                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" type="text" value="{{emp.name}}">
             </div>
             <div class="mb-2">
                 <label class="block text-slate-900 text-md font-semibold mb-2" for="age">Age</label>
-                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="age"id="age" type="text" placeholder="25">
+                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="age"id="age" type="text" value="{{emp.age}}">
             </div>
             <div class="mb-2">
                 <label class="block text-slate-900 text-md font-semibold mb-2" for="age">Qualification</label>
-                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="qualification" id="qualification" type="text" placeholder="B.Tech">
+                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="qualification" id="qualification" type="text" value="{{emp.qualification}}">
             </div>
             <div class="mb-2">
                 <label class="block text-slate-900 text-md font-semibold mb-2" for="age">Designation</label>
-                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="designation" id="designation" type="text" placeholder="Batman">
+                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="designation" id="designation" type="text" value="{{emp.designation}}">
             </div>
             <div class="mb-2">
                 <label class="block text-slate-900 text-md font-semibold mb-2" for="age">Salary</label>
-                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="salary" id="designation" type="text" placeholder="49000">
+                <input class="bg-indigo-100 appearance-none rounded w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none focus:shadow-outline" name="salary" id="designation" type="text" value="{{emp.salary}}">
             </div>
             <input type="file" id="myfile" name="myfile">
             <div class="mt-5 flex items-center justify-center">
@@ -36,5 +36,4 @@
         </form>
     </div>
 </div>
-
 {%endblock%}

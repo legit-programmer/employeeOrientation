@@ -2,7 +2,9 @@ from django.urls import path
 from.import views
 
 urlpatterns = [
-    path('allEmp/', views.allEmp),
+    path('allEmp/', views.EmpListView.as_view()),
     path('addEmp/', views.addEmp),
-    path('manageEmp/', views.manageEmp)
+    path('update/<int:id>', views.updateEmp),
+    path('rem/<int:id>', views.deleteEmp)
+   
 ]
